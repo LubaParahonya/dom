@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="responce" style="font: 1.5em sans-serif"></p>
+    <script>
+        (function(){
+            const info = document.getElementById("responce")
+        window.alert("Hellow from JavaScript")
+        info.innerHTML = "Conform: " + window.confirm("Go or Stop?") + "<br>"
+        info.innerHTML += "Prompt: " + window.prompt("Yes or No", "Yes")
+        
+        })()
+        
+
+
+    </script>
+</body>
+</html>
