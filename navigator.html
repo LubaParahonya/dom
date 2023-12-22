@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <script>
+        (function(){
+            const list_2 = document.getElementById('list')
+            list_2.innerHTML = '<li>Browser: ' + navigator.appName
+            list_2.innerHTML += '<li>Code Name: ' + navigator.appCodeName
+            list_2.innerHTML += '<li>Version: ' + navigator.appVersion
+            list_2.innerHTML += '<li>Platform: ' + navigator.platform
+            if(window.addEventListener){
+                list_2.innerHTML += '<li>  This is a modern DOM browser'
+            }
+        })()
+    </script>
+</body>
+</html>

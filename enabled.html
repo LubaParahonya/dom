@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="info"></p>
+    <script>
+       (function(){ const info_3 = document.getAnimations('info')
+        let status = ''
+        status = (navigator.javaEnabled) ? 'Enabled' : 'Disabled'
+        info_3.innerHTML += 'Java Support is ' + status + 'hr'
+        status = (navigator.cookieEnabled) ? 'Enabled' : 'Disabled'
+        info_3.innerHTML += 'Cookie Support is ' + status + 'hr'
+        if(navigator.plugins.length !==0){
+            info_3.innerHTML += 'No of Plugins: ' + navigator.plugins.length
+            info_3.innerHTML += '<br> Exampler: ' + navigator.plugins[0].name
+            info_3.innerHTML += '<br> For: ' + navigator.plugins[0].description +'<br>'
+
+        }
+        if(navigator.plugins.description !==0){
+            info_3.innerHTML += 'No of MIME Types: ' + navigator.mimeTypes.length
+            info_3.innerHTML += '<br>Elements: ' + navigator.mimeTypes[1].description
+            info_3.innerHTML += '<br> For: ' + navigator.mimeTypes[1].description
+        }
+    })()
+    </script>
+</body>
+</html>
